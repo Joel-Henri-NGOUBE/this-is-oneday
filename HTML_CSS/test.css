@@ -1,0 +1,267 @@
+@font-face {
+    font-family: "open-sans-soft-light";
+    src: url("./Fonts/Fontspring-DEMO-opensanssoft-light.otf");
+}
+
+@font-face {
+    font-family: "urw-grotesk-sc-medium";
+    src: url("./Fonts/URW\ Grotesk\ Medium.ttf");
+}
+
+@font-face {
+    font-family: "urw-grotesk-sc";
+    src: url("./Fonts/URW\ Grotesk\ SC\ Regular.ttf");
+}
+
+@font-face {
+    font-family: "open-sans-soft";
+    src: url("./Fonts/Fontspring-DEMO-opensanssoft-regular.otf");
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #629BBA;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.navbar > span{
+    margin: 0 11px;
+    color: #F0F2F1;
+    font-family: "urw-grotesk-sc";
+    font-size:  1rem;
+}
+
+.navbar > button{
+    margin: 0 0 0 25px;
+    position: relative;
+    top: 2px;
+    background: none;
+    width: max-content;
+    height: max-content;
+    border: none;
+}
+
+
+span, button{
+    text-transform: uppercase;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: 95vh;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 15%;
+    width: 100%;
+    align-items: center;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 650px;
+    height: 85%;
+    position: relative;
+}
+
+p{
+    color: #E0E9EB;
+    text-align: center;
+    margin: 0;
+}
+
+#great-title{
+    font-family: "open-sans-soft-light";
+    font-weight: 100;
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+}
+
+#subtitle{
+    font-family: "open-sans-soft";
+    font-size: 2rem;
+    margin-bottom: 50px;
+    color: #C6D8E2
+}
+
+.ongo span{
+    color:#E0E9EB;
+    font-family: "urw-grotesk-sc";
+    font-size: 1rem;
+    color: #5E6361;
+    margin: 5px 0;
+}
+
+.content button{
+    max-width: max-content;
+    max-height: max-content;
+    padding: 16px 45px;
+    border-radius: 30px;
+    border: none;
+    font-family: "urw-grotesk-sc-medium";
+    font-size: 0.7rem;
+    margin: 0;
+    color: #5E6361;
+}
+
+
+div#popup:target{
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
+}
+
+#popup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 20px;
+    background-color: white;
+    opacity: 0;
+    visibility: hidden;
+    font-family: "urw-grotesk-sc-medium";
+    font-size: 3.5rem;
+    width: 100%;
+    height: 70%;
+}
+
+#popup button{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px;
+    border-radius: 0px;
+    background-color: #629BBA;
+    color: white;
+}
+
+#popup p{
+    color: #629BBA;
+}
+
+.ongo{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 0 5px;
+    border-radius: 5px;
+    position: absolute;
+    right: -20px;
+    top: 5px;
+}
+
+.ongo > *{
+    visibility: hidden;
+    position: absolute;
+}
+
+@media screen and (max-width: 850px) {
+    .navbar > #contact{
+        display: none;
+    } 
+    .navbar > button:focus + .ongo > #contact{
+        visibility: visible;
+        position: relative;
+        border-radius: 5px;
+        padding: 3px;
+    }
+    .navbar > button:focus + .ongo > #contact:hover{
+        background-color: #5E6361;
+        color: #E0E9EB;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .navbar > #blog{
+        display: none;
+    }
+    .content{
+        width: 500px;
+    }
+    .navbar > button:focus + .ongo > #blog{
+        visibility: visible;
+        position: relative;
+        border-radius: 5px;
+        padding: 3px;
+    }
+    .navbar > button:focus + .ongo > #blog:hover{
+        background-color: #5E6361;
+        color: #E0E9EB;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .navbar > #product{
+        display: none;
+    } 
+    .content{
+        width: 400px;
+    }
+    #great-title{
+        font-size: 3rem;
+    }
+    #subtitle{
+        font-size: 1.5rem;
+    } 
+    .navbar > button:focus + .ongo > #product{
+        visibility: visible;
+        position: relative;
+        border-radius: 5px;
+        padding: 3px;
+    }
+    .navbar > button:focus + .ongo > #product:hover{
+        background-color: #5E6361;
+        color: #E0E9EB;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .navbar > #about{
+        display: none;
+    }
+    .content{
+        width: 300px;
+    } 
+    #great-title{
+        font-size: 2.5rem;
+    }
+    #subtitle{
+        font-size: 1rem;
+    }
+    .navbar > button:focus + .ongo > #about{
+        visibility: visible;
+        position: relative;
+        border-radius: 5px;
+        padding: 3px;
+    }
+    .navbar > button:focus + .ongo > #about:hover{
+        background-color: #5E6361;
+        color: #E0E9EB;
+    }
+}
+
+
+
+
+
+
+
+
